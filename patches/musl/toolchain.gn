@@ -67,7 +67,7 @@ gcc_toolchain("arm64") {
 }
 
 gcc_toolchain("arm") {
-  toolprefix = "arm-linux-musl-"
+  toolprefix = "arm-linux-musleabihf-"
 
   cc = "${toolprefix}gcc"
   cxx = "${toolprefix}g++"

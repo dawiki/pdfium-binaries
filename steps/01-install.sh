@@ -51,7 +51,7 @@ case "$TARGET_OS" in
           ;;
 
         arm)
-          MUSL_VERSION="arm-linux-musl-cross"
+          MUSL_VERSION="arm-linux-musleabihf-cross"
           PACKAGES="g++-10"
           ;;
 
