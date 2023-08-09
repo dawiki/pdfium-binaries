@@ -522,8 +522,6 @@ jobs:
       - linux_musl_x86_v8
       - linux_musl_arm64
       - linux_musl_arm64_v8
-      - linux_musl_arm
-      - linux_musl_arm_v8
       - mac_arm64
       - mac_arm64_v8
       - mac_x64
@@ -588,8 +586,6 @@ jobs:
       - linux_musl_x86_v8
       - linux_musl_arm64
       - linux_musl_arm64_v8
-      - linux_musl_arm
-      - linux_musl_arm_v8
       - linux_x64
       - linux_x64_v8
       - linux_x86
