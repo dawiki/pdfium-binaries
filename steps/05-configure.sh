@@ -46,17 +46,7 @@ mkdir -p "$BUILD"
       echo 'is_musl = true'
       echo 'is_clang = false'
       echo 'use_custom_libcxx = false'
-      if [ "$ENABLE_V8" == "true" ]; then
-        case "$TARGET_CPU" in
-          arm64)
-            echo "v8_snapshot_toolchain = \"//build/toolchain/linux:clang_x64_v8_arm64\""
-            ;;
-          *)
-            echo "v8_snapshot_toolchain = \"//build/toolchain/linux:$TARGET_CPU\""
-            ;;
-        esac
-      fi
-
+      [ "$ENABLE_V8" == "true" ] && [ ! "$TARGET_CPU" == "arm64" ] && echo "v8_snapshot_toolchain = \"//build/toolchain/linux:$TARGET_CPU\""
   esac
 
 ) | sort > "$BUILD/args.gn"
