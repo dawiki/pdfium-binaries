@@ -48,9 +48,6 @@ mkdir -p "$BUILD"
       echo 'use_custom_libcxx = false'
       if [ "$ENABLE_V8" == "true" ]; then
         case "$TARGET_CPU" in
-          arm)
-            echo "v8_snapshot_toolchain = \"//build/toolchain/linux:clang_x86_v8_arm\""
-            ;;
           arm64)
             echo "v8_snapshot_toolchain = \"//build/toolchain/linux:clang_x64_v8_arm64\""
             ;;
